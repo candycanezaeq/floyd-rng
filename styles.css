@@ -1,0 +1,303 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    animation: floating 3s ease-in-out infinite;
+    color: #ffcc00;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+#clover-container {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.clover {
+    position: absolute;
+    animation: fall 3s linear forwards;
+    opacity: 0;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+#status-bar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #00ff00;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#luck-code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ff00;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#result-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: shine 1s ease-in-out;
+}
+
+@keyframes shine {
+    to {
+        left: 200%;
+    }
+}
+
+#achievements-panel {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 200px;
+}
+
+#crafting-panel {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.craft-slot {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #666;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#spin-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+#spin-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+}
+
+#spin-btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+#gambling-warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2000;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#gambling-warning button {
+    background: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+#gambling-warning button:hover {
+    transform: scale(1.05);
+}
+
+#gambling-warning button:active {
+    transform: scale(0.95);
+}
+
+#inventory {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 100;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.inventory-item {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: #2a2a2a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.inventory-item.selected {
+    box-shadow: 0 0 0 3px #ffcc00;
+    transform: scale(1.05);
+}
+
+.inventory-item img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 5%;
+}
+
+.inventory-item .item-info {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+.inventory-item .item-name {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.inventory-item .item-rarity {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+#mode-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 101;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#mode-toggle button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#mode-toggle button.active {
+    background: #ffcc00;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    #inventory {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        bottom: 70px;
+    }
+    
+    .inventory-item .item-name {
+        font-size: 0.7rem;
+    }
+    
+    .inventory-item .item-rarity {
+        font-size: 0.6rem;
+    }
+}

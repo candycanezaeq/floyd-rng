@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOYD RNG 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="status-bar">
+        <span id="fps">FPS: 60</span>
+        <span id="luck-multiplier">Luck: 1x</span>
+        <input type="text" id="luck-code" placeholder="Enter luck code..." maxlength="12">
+    </div>
+
+    <div id="clover-container"></div>
+    
+    <h1>FLOYD RNG</h1>
+    
+    <div id="result-container">
+        <img id="result-image" src="" alt="Result Image">
+        <div id="result-rarity"></div>
+        <div id="result-name"></div>
+        <div class="shine-effect"></div>
+    </div>
+
+    <div id="achievements-panel">
+        <h3>Achievements</h3>
+        <div id="achievements-list"></div>
+    </div>
+
+    <div id="crafting-panel">
+        <h3>Crafting</h3>
+        <div id="crafting-slots">
+            <div class="craft-slot" data-slot="0"></div>
+            <div class="craft-slot" data-slot="1"></div>
+            <div class="craft-slot" data-slot="2"></div>
+        </div>
+        <button id="craft-btn" disabled>Craft</button>
+    </div>
+
+    <div id="inventory"></div>
+    <button id="spin-btn" onclick="spin()">Spin</button>
+
+    <div id="gambling-warning">
+        <p>⚠️ Gambling Warning ⚠️</p>
+        <p>Please use this site responsibly. Gambling can be addictive.</p>
+        <button onclick="closeWarning()">I Understand</button>
+    </div>
+
+    <div class="watermark">FLOYD RNG v2.0 by Candycane</div>
+
+    <script src="config.js"></script>
+    <script src="achievements.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

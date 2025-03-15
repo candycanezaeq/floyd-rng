@@ -1,0 +1,40 @@
+const rarities = [
+    { name: "Common", odds: 50, color: "gray" },
+    { name: "Uncommon", odds: 30, color: "green" },
+    { name: "Epic", odds: 10, color: "purple" },
+    { name: "Mythic", odds: 5, color: "pink" },
+    { name: "Legendary", odds: 3, color: "orange" },
+    { name: "Godly", odds: 1.5, color: "gold" },
+    { name: "Exotic", odds: 0.75, color: "cyan" },
+    { name: "Superior", odds: 0.3, color: "red" },
+    { name: "LUNATIC", odds: 0.1, color: "darkred" },
+    { name: "CHAOTIC", odds: 0.05, color: "black" },
+    { name: "Phonk Brainrot", odds: 0.01, color: "lime" }
+];
+
+const floydItems = [
+    { name: "George Droid", image: "https://assets.onecompiler.app/437rezxye/437y3ukaz/IMG_0031.jpeg", rarity: "Common" },
+    { name: "Anne Clank", image: "https://assets.onecompiler.app/437rezxye/4385raew9/IMG_0052.png", rarity: "Common" },
+    { name: "Ambatatron", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0053.png", rarity: "Uncommon" },
+    { name: "XXXTENTACION", image: "https://assets.onecompiler.app/437rezxye/4385rp2gn/IMG_0058.jpeg", rarity: "Uncommon" },
+    { name: "Scooby Jew", image: "https://assets.onecompiler.app/437rezxye/4385raew9/IMG_0054.jpeg", rarity: "Epic" },
+    { name: "Rizzler", image: "https://assets.onecompiler.app/437rezxye/4385raew9/IMG_0055.jpeg", rarity: "Epic" },
+    { name: "Low Taper", image: "https://assets.onecompiler.app/437rezxye/4385raew9/IMG_0056.jpeg", rarity: "Mythic" },
+    { name: "Candycane", image: "https://assets.onecompiler.app/437rezxye/4385raew9/IMG_0057.png", rarity: "Legendary" },
+    { name: "Black Guy", image: "https://assets.onecompiler.app/437rezxye/439aekufq/IMG_0164.gif", rarity: "Godly" },
+    { name: "Chopped Chin", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0088.jpeg", rarity: "Exotic" },
+    { name: "TS PMO", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0089.jpeg", rarity: "Superior" },
+    { name: "Friggin Packet Yo", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0090.jpeg", rarity: "LUNATIC" },
+    { name: "George Derek Fusion", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0091.jpeg", rarity: "CHAOTIC" },
+    { name: "Phonk Brainrot", image: "https://assets.onecompiler.app/437rezxye/438ze2jk7/IMG_0143.gif", rarity: "Phonk Brainrot" },
+    { name: "AI Putin", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0092.jpeg", rarity: "Exotic" },
+    { name: "My Cat", image: "https://assets.onecompiler.app/437rezxye/438aaxqjb/IMG_0093.png", rarity: "Superior" },
+    { name: "Skid Kid", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0116.jpeg", rarity: "LUNATIC" },
+    { name: "Tuff Bear", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0127.jpeg", rarity: "CHAOTIC" },
+    { name: "Gangsta Simpsons", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0128.jpeg", rarity: "Phonk Brainrot" },
+    { name: "Hot Black Guy", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0130.jpeg", rarity: "Phonk Brainrot" },
+    { name: "Grubhub", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/IMG_0131.jpeg", rarity: "Phonk Brainrot" },
+    { name: "Server Warning", image: "https://assets.onecompiler.app/437rezxye/438ycydqa/Screenshot_2025-01-06_173218.png", rarity: "Phonk Brainrot" },
+    { name: "Batatron Floyd Duo", image: "https://assets.onecompiler.app/437rezxye/438ze2jk7/IMG_0135.jpeg", rarity: "Phonk Brainrot" },
+    { name: "Alien", image: "https://assets.onecompiler.app/437rezxye/438ze2jk7/IMG_0139.jpeg", rarity: "Phonk Brainrot" }
+];
